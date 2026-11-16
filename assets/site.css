@@ -171,6 +171,13 @@ a:hover { color: var(--rust); }
 .article .btn { margin: 4px 0 18px; border-color: var(--rust); background: var(--rust); color: var(--bg); padding: 12px 18px; }
 .article .btn:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .article .closing { font-family: var(--serif-display); font-style: italic; font-size: 30px; line-height: 1.35; text-align: center; color: var(--ink); margin: 10px auto 0; max-width: 620px; }
+.article .timeline { list-style: none; margin: 18px 0 10px; padding: 0; position: relative; }
+.article .timeline::before { content: ""; position: absolute; left: 132px; top: 6px; bottom: 6px; width: 2px; background: var(--rule); }
+.article .timeline li { display: grid; grid-template-columns: 118px 1fr; gap: 0 32px; padding: 0 0 22px; position: relative; }
+.article .timeline li::before { content: ""; position: absolute; left: 127px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--rust); box-shadow: 0 0 0 4px var(--bg); }
+.article .timeline .when { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--rust); text-align: right; padding-top: 2px; }
+.article .timeline .what { font-size: 17px; line-height: 1.5; }
+.article .timeline .what strong { font-family: var(--serif-display); font-size: 21px; font-weight: 600; display: block; line-height: 1.2; margin-bottom: 2px; }
 .article-nav { max-width: var(--measure); margin: 0 auto 90px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .article-nav a { border: 1px solid var(--rule); background: var(--card); padding: 22px; text-decoration: none; }
 .article-nav a:hover { border-color: var(--rust); }
@@ -219,6 +226,10 @@ a:hover { color: var(--rust); }
   .article .cell.divide { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 14px; }
   .article .box { padding: 20px 18px 4px; }
   .article-nav { grid-template-columns: 1fr; padding: 0 16px; }
+  .article .timeline::before { left: 6px; }
+  .article .timeline li { grid-template-columns: 1fr; padding-left: 30px; }
+  .article .timeline li::before { left: 1px; }
+  .article .timeline .when { text-align: left; }
   .article-nav .nx { grid-column: 1; }
   .unit { grid-template-columns: 1fr; gap: 8px; }
   .unit .idx { padding: 0; }
